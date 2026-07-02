@@ -1,0 +1,81 @@
+body {
+  background-image: url("images/dandelion-bg.jpg");
+  background-size: 60% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: arial, sans-serif;
+}
+h1 {
+  text-align: center;
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.filter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 25px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
+}
+.card {
+  width: 100%;
+  min-width: 320px;
+  max-height: 340px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.price-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 200px;
+  margin-top: auto;
+  font-size: 1rem;
+  padding-top: 5px;
+}
+.card img {
+  max-height: 110px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.card h2 {
+  font-size: 1.4rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.card h3 {
+  font-size: 0.85rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.card span,
+.card p:first-of-type {
+  font-size: 1rem;
+  margin-bottom: 1px;
+}
+.card p,
+.card ul,
+.card li {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.card ul {
+  padding-left: 15px;
+}
