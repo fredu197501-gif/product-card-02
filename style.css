@@ -11,39 +11,31 @@ h1 {
   width: 80%;
   font-family: Arial, Helvetica, sans-serif;
   font-variant: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-.filter {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px 25px;
-  margin-bottom: 15px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  width: 100%;
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  max-width: 1110px;
+  width: fit-content;
+  margin: 0 auto;
 }
 .card {
-  width: 100%;
-  min-width: 320px;
-  max-height: 340px;
-  padding: 15px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .price-box {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 200px;
   margin-top: auto;
   font-size: 1rem;
   padding-top: 5px;
@@ -68,7 +60,6 @@ h1 {
   font-size: 1rem;
   margin-bottom: 1px;
 }
-.card p,
 .card ul,
 .card li {
   font-size: 0.75rem;
@@ -78,4 +69,9 @@ h1 {
 }
 .card ul {
   padding-left: 15px;
+}
+.card-text {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
 }
