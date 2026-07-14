@@ -9,6 +9,7 @@ body {
   font-family: Arial, Montserrat;
   background-color: #ffffff;
 }
+
 .layout {
   position: relative;
   width: 100%;
@@ -16,6 +17,7 @@ body {
   height: 1750px;
   margin: 0 auto;
 }
+
 .layout__title {
   position: absolute;
   width: 846px;
@@ -32,6 +34,7 @@ body {
   justify-content: center;
   color: #515076;
 }
+
 .layout__product-card {
   position: relative;
   width: 1110px;
@@ -46,6 +49,7 @@ body {
   justify-content: center;
   gap: 20px;
 }
+
 .card {
   width: 340px;
   height: 573px;
@@ -57,6 +61,7 @@ body {
   padding: 20px;
   font-family: Arial, Montserrat;
 }
+
 .card__image {
   width: 100%;
   height: 245;
@@ -64,6 +69,7 @@ body {
   align-self: center;
   margin-top: auto;
 }
+
 .card__subtitle {
   font-weight: 600px;
   font-size: 12px;
@@ -73,6 +79,7 @@ body {
   color: #a5a3b9;
   margin-bottom: 5px;
 }
+
 .card__title {
   font-weight: 700px;
   font-style: bold;
@@ -82,6 +89,7 @@ body {
   color: #515076;
   margin-bottom: 10px;
 }
+
 .card__desc {
   font-weight: 400px;
   font-style: regular;
@@ -90,11 +98,13 @@ body {
   color: #515076;
   margin-bottom: 15px;
 }
+
 .card__composition {
   margin-bottom: 15px;
   font-family: Arial, Montserrat;
   color: #f7f7fa;
 }
+
 .composition__title {
   font-size: 13px;
   font-weight: 400;
@@ -105,12 +115,14 @@ body {
   letter-spacing: 0%;
   margin-bottom: 5px;
 }
+
 .composition__list {
   list-style: disc;
   color: #515076;
   font-family: Arial, Montserra;
   padding-left: 20px;
 }
+
 .composition__list li {
   font-weight: 400px;
   font-size: 13px;
@@ -118,6 +130,7 @@ body {
   color: #515076;
   font-family: Arial, Montserrat;
 }
+
 .composition__list li::before {
   content: "";
   position: absolute;
@@ -128,6 +141,7 @@ body {
   border-radius: 50%;
   background-color: #a5a4ad;
 }
+
 .card__price-box {
   display: flex;
   justify-content: space-between;
@@ -139,6 +153,7 @@ body {
   height: 24px;
   color: #515076;
 }
+
 .prise__label {
   font-weight: 700px;
   font-style: bold;
@@ -147,6 +162,7 @@ body {
   color: #515076;
   font-family: Arial, Montserrat;
 }
+
 .price__value {
   font-weight: 400px;
   font-style: regular;
@@ -160,22 +176,26 @@ body {
   top: 408px;
   left: 85px;
 }
+
 .card_1 .card__image {
   top: 433px;
   left: 110px;
 }
+
 .card_1 .card__subtitle {
   width: 171px;
   height: 24px;
   top: 708px;
   left: 110px;
 }
+
 .card_1 .card__title {
   width: 220px;
   height: 27px;
   top: 737px;
   left: 110px;
 }
+
 .card_1 .card__desc {
   width: 287px;
   height: 36px;
@@ -189,12 +209,14 @@ body {
   top: 820px;
   left: 110px;
 }
+
 .card_1 .composition__title {
   width: 49px;
   height: 18px;
   top: 820px;
   left: 110px;
 }
+
 .card_1 .composition__list {
   top: 843px;
   left: 110px;
@@ -206,12 +228,14 @@ body {
   top: 932px;
   left: 110px;
 }
+
 .card_1 .price-box__label {
   width: 56px;
   height: 24px;
   top: 932px;
   left: 110px;
 }
+
 .card_1 .price-box__value {
   width: 73px;
   height: 24px;
@@ -223,24 +247,28 @@ body {
   top: 408px;
   left: 470px;
 }
+
 .card_2 .card__image {
   width: 290;
   height: 245;
   top: 433px;
   left: 495px;
 }
+
 .card_2 .card__subtitle {
   width: 171px;
   height: 24px;
   top: 708px;
   left: 495px;
 }
+
 .card_2 .card__title {
   width: 230px;
   height: 27px;
   top: 737px;
   left: 495px;
 }
+
 .card_2 .card__desc {
   width: 291px;
   height: 36px;
@@ -254,12 +282,14 @@ body {
   top: 820px;
   left: 495px;
 }
+
 .card_2 .composition__title {
   width: 49px;
   height: 18px;
   top: 820px;
   left: 495px;
 }
+
 .card_2 .composition__list {
   top: 843px;
   left: 495px;
@@ -271,12 +301,14 @@ body {
   top: 932px;
   left: 495px;
 }
+
 .card_2 .price-box__label {
   width: 56px;
   height: 24px;
   top: 932px;
   left: 495px;
 }
+
 .card_2 .price-box__value {
   width: 75px;
   height: 24px;
@@ -288,22 +320,26 @@ body {
   top: 408px;
   left: 855px;
 }
+
 .card_3 .card__image {
   top: 433px;
   left: 880px;
 }
+
 .card_3 .card__subtitle {
   width: 171px;
   height: 24px;
   top: 708px;
   left: 880px;
 }
+
 .card_3 .card__title {
   width: 210px;
   height: 27px;
   top: 737px;
   left: 880px;
 }
+
 .card_3 .card__desc {
   width: 291px;
   height: 36px;
@@ -317,12 +353,14 @@ body {
   top: 820px;
   left: 880px;
 }
+
 .card_3 .composition__title {
   width: 49px;
   height: 18px;
   top: 820px;
   left: 880px;
 }
+
 .card_3 .composition__list {
   top: 843px;
   left: 880px;
@@ -334,12 +372,14 @@ body {
   top: 932px;
   left: 880px;
 }
+
 .card_3 .price-box__label {
   width: 56px;
   height: 24px;
   top: 932px;
   left: 880px;
 }
+
 .card_3 .price-box__value {
   width: 70px;
   height: 24px;
@@ -351,22 +391,26 @@ body {
   top: 1026px;
   left: 277px;
 }
+
 .card_4 .card__image {
   top: 1051px;
   left: 302px;
 }
+
 .card_4 .card__subtitle {
   width: 171px;
   height: 24px;
   top: 1326px;
   left: 302px;
 }
+
 .card_4 .card__title {
   width: 251px;
   height: 27px;
   top: 1355px;
   left: 302px;
 }
+
 .card_4 .card__desc {
   width: 287px;
   height: 36px;
@@ -380,12 +424,14 @@ body {
   top: 1438px;
   left: 302px;
 }
+
 .card_4 .composition__title {
   width: 49px;
   height: 18px;
   top: 1438px;
   left: 302px;
 }
+
 .card_4 .composition__list {
   top: 1461px;
   left: 317px;
@@ -397,12 +443,14 @@ body {
   top: 1550px;
   left: 302px;
 }
+
 .card_4 .price-box__label {
   width: 56px;
   height: 24px;
   top: 1550px;
   left: 302px;
 }
+
 .card_4 .price-box__value {
   width: 75px;
   height: 24px;
@@ -414,22 +462,26 @@ body {
   top: 1026px;
   left: 662px;
 }
+
 .card_5 .card__image {
   top: 1051px;
   left: 687px;
 }
+
 .card_5 .card__subtitle {
   width: 171px;
   height: 24px;
   top: 1326px;
   left: 687px;
 }
+
 .card_5 .card__title {
   width: 251px;
   height: 27px;
   top: 1355px;
   left: 687px;
 }
+
 .card_5 .card__desc {
   width: 291px;
   height: 36px;
@@ -443,12 +495,14 @@ body {
   top: 1438;
   left: 687px;
 }
+
 .card_5 .composition__title {
   width: 4px;
   height: 18px;
   top: 1438px;
   left: 687;
 }
+
 .card_5 .composition__list {
   width: 41px;
   height: 18px;
@@ -460,12 +514,14 @@ body {
   top: 1550px;
   left: 687px;
 }
+
 .card_5 .price-box__label {
   width: 56px;
   height: 24;
   top: 1550;
   left: 687px;
 }
+
 .card_5 .price-box__value {
   width: 73px;
   height: 24px;
