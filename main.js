@@ -1,17 +1,18 @@
-const cardSelector = ".card";
-const changeColorAllCardButton = document.querySelector("#change-color-all-card");
-const changeColorCard1Button = document.querySelector("#change-card_1-color");
-const card1Selector = ".card_1";
+const ALL_CARD_SELECTOR = ".card";
+const FIRST_CARD_SELECTOR = ".card_1";
+
+const changeAllCardColorButton = document.querySelector("#change-all-card-color");
+const changeFirstCardColorButton = document.querySelector("#change-first-card-color");
 
 const greenColorHash = "#4CAF50";
 const blueColorHash = "#0000ff";
 
-const containerCards = Array.from(document.querySelectorAll(cardSelector));
-const card1ContainerCard = document.querySelector(card1Selector);
+const allCards = Array.from(document.querySelectorAll(ALL_CARD_SELECTOR));
+const firstCard = document.querySelector(FIRST_CARD_SELECTOR);
 
-if (changeColorAllCardButton) {
-  changeColorAllCardButton.addEventListener("click", () => {
-    containerCards.forEach((card) => {
+if (changeAllCardColorButton) {
+  changeAllCardColorButton.addEventListener("click", () => {
+    allCards.forEach((card) => {
       if (card) {
         card.style.backgroundColor = greenColorHash;
       }
@@ -19,9 +20,9 @@ if (changeColorAllCardButton) {
   });
 }
 
-if (changeColorCard1Button && card1ContainerCard) {
-  changeColorCard1Button.addEventListener("click", () => {
-    card1ContainerCard.style.backgroundColor = blueColorHash;
+if (changeFirstCardColorButton && firstCard) {
+  changeFirstCardColorButton.addEventListener("click", () => {
+    firstCard.style.backgroundColor = blueColorHash;
   });
 }
 
