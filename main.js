@@ -28,28 +28,27 @@ if (changeFirstCardColorButton && firstCard) {
 
 const openGoogleButton = document.querySelector("#open-google");
 
-openGoogleButton.addEventListener("click", openGoogle)
+if (openGoogleButton) {
+  openGoogleButton.addEventListener("click", openGoogle);
+}
 
 function openGoogle() {
   const answer = confirm("Вы действительно хотите открыть Google?");
 
   if (answer === true) {
-    window.open("https://google.com")
-  } else {
-    return;
+    window.open("https://google.com");
   }
 }
 
 const outputLogButton = document.querySelector("#output-console-log");
 
 if (outputLogButton) {
-
-  outputLogButton.addEventListener("click", () => outputConsoleLog("Дз №6"))
+  outputLogButton.addEventListener("click", () => outputConsoleLog("Дз №6"));
 }
 
 function outputConsoleLog(message) {
-  alert(message)
-  console.log(message)
+  alert(message);
+  console.log(message);
 }
 
 const mainTitle = document.querySelector(".layout__title");
@@ -65,8 +64,6 @@ const toggleButton = document.querySelector("#toggle-color-button");
 if (toggleButton) {
   toggleButton.addEventListener("click", () => {
     toggleButton.classList.toggle("active");
-  })
+  });
 }
-
-// Если кнопки или карточки нет на странице, код не вызывает ошибок.
 
