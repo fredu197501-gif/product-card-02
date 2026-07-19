@@ -18,6 +18,20 @@ body {
   margin: 0 auto;
 }
 
+.button-toggle {
+  background-color: #007bff;
+  color: whitesmoke;
+  padding: 8px 15px;
+  border: 2px darkblue dotted;
+  cursor: pointer;
+  transform: backgraund-color 0.3s;
+}
+
+.button-toggle.active {
+  background-color: antiquewhite;
+  color: black;
+}
+
 .layout__title {
   position: absolute;
   width: 846px;
