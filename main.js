@@ -28,9 +28,9 @@ if (changeFirstCardColorButton && firstCard) {
 
 const openGoogleButton = document.querySelector("#open-google");
 
-if (openGoogleButton) {
-  openGoogleButton.addEventListener("click", openGoogle);
-}
+
+openGoogleButton.addEventListener("click", openGoogle);
+
 
 function openGoogle() {
   const answer = confirm("Вы действительно хотите открыть Google?");
