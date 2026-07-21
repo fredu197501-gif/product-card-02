@@ -40,7 +40,7 @@ buyProdukt(900);
 function checkAge(name, birthYear) {
   const cyrrenYear = 2026;
   const age = cyrrenYear - birthYear;
-  console.log(`${name} Ваш возрост ${age} лет.`)
+  console.log(`${name} Ваш возрост ${age} лет.`);
 }
 
 checkAge("Хабиб", 2000);
