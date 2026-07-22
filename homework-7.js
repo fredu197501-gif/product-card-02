@@ -5,14 +5,13 @@ function displayWether(city, temperature) {
 }
 displayWether("Бишкеке", 40);
 
-
 // Переменная функция скорость света
-const speed_of_light = 299792458;
+const SPEED_OF_LIGHT = 299792458;
 
 function checkSpeedOfLight(speed) {
-  if (speed > speed_of_light) {
+  if (speed > SPEED_OF_LIGHT) {
     console.log("Сверхсветовая скорость");
-  } else if (speed === speed_of_light) {
+  } else if (speed === SPEED_OF_LIGHT) {
     console.log("Скорость света");
   } else {
     console.log("Субсветовая скорость");
