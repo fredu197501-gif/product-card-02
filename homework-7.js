@@ -1,21 +1,28 @@
 // функция которая принимает два параметра.
-const city = 'Бишкеке';
-const temperature = 40;
+function displayWether(city, temperature) {
+  const message = `Сейчас в ${city}, Температура: ${temperature}\u00B0C по Цельсию`;
+  console.log(message);
+}
+displayWether("Бишкеке", 40);
 
-const message = `Сейчас в ${city}, Температура - ${temperature} \u00B0C по цельсию`;
-
-console.log(message)
 
 // Переменная функция скорость света
-let SPEED_OF_LIGHT = 299792458;
+function checkSpeedOfLight(speed) {
+  const speed_of_light = 299792458;
 
-if (SPEED_OF_LIGHT > 299792458) {
-  console.log("Сверхсветовая скорость");
-} else if (SPEED_OF_LIGHT === 299792458) {
-  console.log("Скорость света");
-} else {
-  console.log("Субсветовая скорость");
+
+  if (speed > speed_of_light) {
+    console.log("Сверхсветовая скорость");
+  } else if (speed === speed_of_light) {
+    console.log("Скорость света");
+  } else {
+    console.log("Субсветовая скорость");
+  }
 }
+
+checkSpeedOfLight(300000000);
+checkSpeedOfLight(299792458);
+checkSpeedOfLight(200000000);
 
 // Переменная функция покупка
 const produkt = "Самокат:";
