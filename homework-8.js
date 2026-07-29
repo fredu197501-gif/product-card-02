@@ -1,5 +1,5 @@
 // №3 Объект на основе данных. 
-const Student = {
+const student = {
   name: "Уланбек",
   secondname: "Токтонбаев",
   mail: "fredu197501@gmail.com",
@@ -10,7 +10,7 @@ const Student = {
   country: "Кыргызстан",
 };
 
-console.log(Student)
+console.log(student)
 
 // №4 Объект хранящий данные автомобиля
 const auto = {
@@ -18,17 +18,12 @@ const auto = {
   model: "Estima",
   year: 2000,
   color: "Серебро",
-  transmission: "Автомат"
+  transmission: "Автомат",
 };
 
-const owner = {
-  name: "Уланбек",
-  secondname: "Токтонбаев"
-};
+auto.owner = student;
 
-const driver = { ...owner, ...auto };
-
-console.log(driver)
+console.log(auto);
 
 // №5 Функция проверяющая свойство объекта
 function checkMaxSpeed(autoObject) {
@@ -102,8 +97,8 @@ const fantasyBooks = [
     genre: "Фэнтези"
   },
   {
-    title: "Мастер и Маргарита",
-    author: "Михаил Булгаков",
+    title: "Властелин колец: Братство кольца",
+    author: "Дж. Р. Р. Толкин",
     year: 1954,
     coverColor: "Золотой",
     genre: "Фэнтези"
@@ -114,7 +109,7 @@ const allBooks = [...books, ...fantasyBooks];
 console.log(allBooks);
 
 // №10 Функция, использующая метод - map, что бы добавить новое свойство для объекта "isRare"
-function checkRarity(booksArroy) {
+function updateBooksRarity(booksArroy) {
   return booksArroy.map((book) => {
     return {
       ...book,
@@ -123,6 +118,6 @@ function checkRarity(booksArroy) {
   });
 }
 
-const updatedBooks = checkRarity(allBooks);
+const updatedBooks = updateBooksRarity(allBooks);
 
 console.table(updatedBooks);
