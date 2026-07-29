@@ -109,7 +109,7 @@ const allBooks = [...books, ...fantasyBooks];
 console.log(allBooks);
 
 // №10 Функция, использующая метод - map, что бы добавить новое свойство для объекта "isRare"
-function updateBooksRarity(booksArroy) {
+function getBooksRarity(booksArroy) {
   return booksArroy.map((book) => {
     return {
       ...book,
@@ -118,6 +118,6 @@ function updateBooksRarity(booksArroy) {
   });
 }
 
-const updatedBooks = updateBooksRarity(allBooks);
+const getBooks = getBooksRarity(allBooks);
 
-console.table(updatedBooks);
+console.table(getBooks);
