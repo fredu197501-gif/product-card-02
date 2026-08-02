@@ -10,7 +10,7 @@ const student = {
   country: "Кыргызстан",
 };
 
-console.log(student)
+console.log(student);
 
 // №4 Объект хранящий данные автомобиля
 const auto = {
