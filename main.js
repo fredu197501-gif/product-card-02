@@ -6,6 +6,7 @@ import "./homework-9.js";
 import "./homework-10.js";
 import { Modal } from "./modal.js";
 import { Form } from "./form.js";
+
 // 3) Создаем структуру и наследуемость класса.
 class Car {
   constructor(brand, model, year, transmission, color) {
