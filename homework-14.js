@@ -5,12 +5,16 @@ export class Modal {
     }
   };
 
+  #onCloseButtonClick = () => {
+    this.close();
+  };
+
   constructor(modalId, buttonId, shouldCloseOnOverlay) {
     this.modal = document.getElementById(modalId);
     this.overlay = document.getElementById('auth-overlay');
+    this.closeButton = this.modal.querySelector('#modal-close-button');
     this.shouldCloseOnOverlay = shouldCloseOnOverlay;
     this.#initOpen(buttonId);
-    this.#initClose();
   }
 
   open() {
@@ -19,6 +23,7 @@ export class Modal {
     if (this.shouldCloseOnOverlay) {
       this.overlay.addEventListener('click', this.#onOverlayClick);
     }
+    this.#initClose();
     console.log(this.modal.id, 'открыто?', this.isOpen());
   }
 
@@ -26,7 +31,7 @@ export class Modal {
     this.modal.classList.remove('modal-showed');
     this.overlay.classList.remove('auth-overlay-showed');
     this.overlay.removeEventListener('click', this.#onOverlayClick);
-    console.log(this.modal.id, 'открыто?', this.isOpen());
+    this.closeButton?.removeEventListener('click', this.#onCloseButtonClick);
   }
 
   isOpen() {
@@ -39,13 +44,6 @@ export class Modal {
   }
 
   #initClose() {
-    const closeButton = this.modal.querySelector('#modal-close-button');
-    if (closeButton) {
-      closeButton.addEventListener('click', () => {
-        if (this.isOpen()) {
-          this.close();
-        }
-      });
-    }
+    this.closeButton?.addEventListener('click', this.#onCloseButtonClick);
   }
 }
