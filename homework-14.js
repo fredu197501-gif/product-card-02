@@ -39,7 +39,13 @@ export class Modal {
   }
 
   #initClose() {
-    this.modal.querySelector('#modal-close-button')
-      .addEventListener('click', () => this.close());
+    const closeButton = this.modal.querySelector('#modal-close-button');
+    if (closeButton) {
+      closeButton.addEventListener('click', () => {
+        if (this.isOpen()) {
+          this.close();
+        }
+      });
+    }
   }
 }
