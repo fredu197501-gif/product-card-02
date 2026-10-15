@@ -6,6 +6,7 @@ import "./homework-9.js";
 import "./homework-10.js";
 import { Modal } from "./modal.js";
 import { Form } from "./form.js";
+import { Modal as OverlayModal } from "./homework-14.js";
 
 // 3) Создаем структуру и наследуемость класса.
 class Car {
@@ -57,3 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.addEventListener('click', () => modalWindow.close());
   }
 })
+
+// Дз №14 : Решаем проблему, связанную с оверлеем.
+const registrationModal = new OverlayModal('registration-modal', 'registration-button', true);
+const authModal = new OverlayModal('auth-modal', 'auth-button', false);

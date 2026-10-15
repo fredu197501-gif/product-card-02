@@ -29,7 +29,7 @@ class Drink {
   serve() {
     this.#brewDrinks();
     if (this.isReady) {
-      console.log(`Ваш напиток "${this.name}" с "${this.hasAdditive()}" готов!`);
+      console.log(`Ваш напиток "${this.name}" с ${this.hasAdditive()} готов!`);
     }
   }
 }
@@ -90,7 +90,7 @@ class Cafe {
 
   orderBeverage(beverage) {
     console.log(`\n--- Новый заказ в кафе "${this.name}"---`);
-    console.log(`[Клиент]: Я хочу заказать ${beverage.getInfo()} с ${beverage.hasAdditive()}`);
+    console.log(`[Клиент]: Я хочу заказать ${beverage.getInfo()} с ${beverage.additive}`);
     beverage.serve();
   }
 }
@@ -105,23 +105,24 @@ myCafe.orderBeverage = function (beverage) {
 }
 
 class Beverage {
-  constructor(name, size, price,) {
+  constructor(name, size, price, additive) {
     this.name = name;
     this.size = size;
     this.price = price;
+    this.additive = additive;
   }
 
   getInfo() {
     return `Напиток: ${this.name}, Размер: ${this.size}, Цена: ${this.price} \u20bd`;
   }
   serve() {
-    console.log(`Ваш напиток "${this.name}" готов!`);
+    console.log(`Ваш напиток "${this.name}" с "${this.additive}" готов!`);
   }
 }
 
-const myCoffee = new Beverage("Капучино", "M", 150);
-const myTea = new Beverage("Черный чай", "S", 100);
-const myLemonade = new Beverage("Лимонад", "XL", 120);
+const myCoffee = new Beverage("Капучино", "M", 150, "молоком");
+const myTea = new Beverage("Черный чай", "S", 100, "лимоном");
+const myLemonade = new Beverage("Лимонад", "XL", 120, "льдом");
 
 myCafe.orderBeverage(myCoffee);
 myCafe.orderBeverage(myTea);

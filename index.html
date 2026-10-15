@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@400ж600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -93,8 +93,32 @@
     </div>
   </div>
 
+  <!--Дз №14 : Решаем проблему, связанную с оверлеем-->
+  <div class="auth-overlay" id="auth-overlay"></div>
+  <div class="btn-box">
+    <button class="button" id="registration-button">Регистрация</button>
+    <button class="button" id="auth-button">Аутентификация</button>
+  </div>
+
+  <div id="registration-modal" class="modal modal-style">
+    <button id="modal-close-button" class="modal-close-button">X</button>
+    <h1>Регистрация</h1>
+    <span>Пароль</span>
+    <span>Повторите пароль</span>
+    <span>Логин</span>
+    <span>Почта</span>
+  </div>
+
+  <div id="auth-modal" class="modal modal-style">
+    <button id="modal-close-button" class="modal-close-button">X</button>
+    <h1>Аутентификация</h1>
+    <p>Логин</p>
+    <p>Пароль</p>
+  </div>
 
   <script src="main.js" type="module"></script>
+
+  <script src="homework-13.js" type="module"></script>
 
 </body>
 
