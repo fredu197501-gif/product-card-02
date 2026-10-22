@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Список пользователей</title>
+  <link rel="stylesheet" href="async.css">
+</head>
+
+<body>
+  <div id="loader" class="loader-overlay"></div>
+  <div class="loader-container">
+    <div class="spinner"></div>
+    <p>"Данные загружаются"</p>
+  </div>
+  <div class="buttons-container">
+    <button id="deleteBtnAllCards">для удаления всех карточек</button>
+    <button id="deleteBtnSpecificCard">для удаления определенной карточки</button>
+    <button id="getBtnAllCards">для получения всех карточек</button>
+  </div>
+
+  <ul id="users-list"></ul>
+
+  <template id="user-template">
+    <li class="user-card">
+      <p class="user-id"></p>
+      <p class="user-name"></p>
+      <p class="user-surname"></p>
+      <p class="user-email"></p>
+      <p class="user-age"></p>
+    </li>
+  </template>
+
+  <script src="async.js"></script>
+</body>
+
+</html>
