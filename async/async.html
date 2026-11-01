@@ -1,37 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <title>Список пользователей</title>
-  <link rel="stylesheet" href="async.css">
+  <link rel="stylesheet" href="async.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <div id="loader" class="loader-overlay"></div>
-  <div class="loader-container">
-    <div class="spinner"></div>
-    <p>"Данные загружаются"</p>
+  <div class="layout">
+
+    <h1 class="catalog-title">Список пользователей</h1>
+
+    <div id="loader" class="loader-overlay hidden">
+      <div class="spinner"></div>
+      <p id="downloading-text">Данные загружаются</p>
+    </div>
+
+    <div class="buttons-container">
+      <button id="deleteBtnAllCards">Удалить все карточки</button>
+      <button id="getBtnAllCards">Получить все карточки</button>
+    </div>
+
+    <div id="status-box" class="status-box">
+      <span id="loading-error" class="hidden">Ошибка загрузки данных</span>
+      <p id="data-loading" class="hidden">Данные загружены</p>
+    </div>
+
+    <div id="users-list"></div>
+
+    <template id="user-card-template">
+      <div class="user-container">
+        <p class="user-id"></p>
+        <p class="user-name"></p>
+        <p class="user-surname"></p>
+        <p class="user-email"></p>
+        <p class="user-age"></p>
+        <button class="Btn-Specific">Удалить выбранную карточку</button>
+      </div>
+    </template>
   </div>
-  <div class="buttons-container">
-    <button id="deleteBtnAllCards">для удаления всех карточек</button>
-    <button id="deleteBtnSpecificCard">для удаления определенной карточки</button>
-    <button id="getBtnAllCards">для получения всех карточек</button>
-  </div>
 
-  <ul id="users-list"></ul>
-
-  <template id="user-template">
-    <li class="user-card">
-      <p class="user-id"></p>
-      <p class="user-name"></p>
-      <p class="user-surname"></p>
-      <p class="user-email"></p>
-      <p class="user-age"></p>
-    </li>
-  </template>
-
-  <script src="async.js"></script>
+  <script src="async.js" defer></script>
 </body>
 
 </html>

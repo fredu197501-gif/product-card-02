@@ -1,53 +1,51 @@
-{
-  "user": [
-    {
-      "id": 1,
-      "name": "Айдар",
-      "surname": "Сулейманов",
-      "email": "aidar.suleymanov@example.com",
-      "age": 25
-    },
-    {
-      "id": 2,
-      "name": "Алина",
-      "surname": "Кузнецова",
-      "email": "alina.kuznetsova@example.com",
-      "age": 28
-    },
-    {
-      "id": 3,
-      "name": "Дмитрий",
-      "surname": "Иванов",
-      "email": "dmitry.ivanov@example.com",
-      "age": 30
-    },
-    {
-      "id": 4,
-      "name": "Екатерина",
-      "surname": "Петрова",
-      "email": "ekaterina.petrova@example.com",
-      "age": 26
-    },
-    {
-      "id": 5,
-      "name": "Максим",
-      "surname": "Смирнов",
-      "email": "maxim.smirnov@example.com",
-      "age": 29
-    },
-    {
-      "id": 6,
-      "name": "Ольга",
-      "surname": "Васильева",
-      "email": "olga.vasilieva@example.com",
-      "age": 27
-    },
-    {
-      "id": 7,
-      "name": "Сергей",
-      "surname": "Морозов",
-      "email": "sergey.morozov@example.com",
-      "age": 31
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Айдар",
+    "surname": "Сулейманов",
+    "email": "aidar.suleymanov@example.com",
+    "age": 25
+  },
+  {
+    "id": 2,
+    "name": "Алина",
+    "surname": "Кузнецова",
+    "email": "alina.kuznetsova@example.com",
+    "age": 28
+  },
+  {
+    "id": 3,
+    "name": "Дмитрий",
+    "surname": "Иванов",
+    "email": "dmitry.ivanov@example.com",
+    "age": 30
+  },
+  {
+    "id": 4,
+    "name": "Екатерина",
+    "surname": "Петрова",
+    "email": "ekaterina.petrova@example.com",
+    "age": 26
+  },
+  {
+    "id": 5,
+    "name": "Максим",
+    "surname": "Смирнов",
+    "email": "maxim.smirnov@example.com",
+    "age": 29
+  },
+  {
+    "id": 6,
+    "name": "Ольга",
+    "surname": "Васильева",
+    "email": "olga.vasilieva@example.com",
+    "age": 27
+  },
+  {
+    "id": 7,
+    "name": "Сергей",
+    "surname": "Морозов",
+    "email": "sergey.morozov@example.com",
+    "age": 31
+  }
+]
