@@ -3,9 +3,9 @@
 }
 
 body {
-min-height: 100vh;
-background-color: #f7f7fa;
-font-family: Montserrat, Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #f7f7fa;
+  font-family: Montserrat, Arial, sans-serif;
 }
 
 .layout {
@@ -117,7 +117,7 @@ font-family: Montserrat, Arial, sans-serif;
   font-weight: 600;
 }
 
-.Btn-Specific {
+.btn-specific {
   margin-top: auto;
   padding: 8px 15px;
   background-color: #dc3545;
@@ -127,6 +127,6 @@ font-family: Montserrat, Arial, sans-serif;
   cursor: pointer;
 }
 
-.Btn-Specific:hover {
+.btn-specific:hover {
   background-color: #b02a37;
 }

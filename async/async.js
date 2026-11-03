@@ -3,24 +3,23 @@ const loadingError = document.querySelector('#loading-error');
 const dataLoading = document.querySelector('#data-loading');
 const getBtnAllCards = document.querySelector('#getBtnAllCards');
 const deleteBtnAllCards = document.querySelector('#deleteBtnAllCards');
-const loader = document.querySelector('#loader')
+const loader = document.querySelector('#loader');
+const cardTemplate = document.querySelector('#user-card-template');
 const USERS_STORAGE_KEY = 'users';
-const SIMULATE_ERROR = false;
 
-function getFromStorage(key) {
+const toggle = (el, show) => el.classList.toggle('hidden', !show);
+
+const getFromStorage = key => {
   try {
-    const raw = localStorage.getItem(key);
-    return raw ? JSON.parse(raw) : null;
-  } catch (error) {
+    ;
+    return JSON.parse(localStorage.getItem(key));
+  } catch {
     localStorage.removeItem(key);
     return null;
   }
 }
 
-function saveToStorage(key, data) {
-  if (data === undefined) return;
-  localStorage.setItem(key, JSON.stringify(data));
-}
+const saveToStorage = (key, data) => localStorage.setItem(key, JSON.stringify(data));
 
 let isFirstAttempt = true;
 
@@ -31,58 +30,51 @@ async function fetchUsers() {
     throw new Error('Ошибка при загрузке данных');
   }
   const response = await fetch('users.json');
-  if (!response.ok) {
+  if (!response.ok)
     throw new Error('Ошибка при загрузке данных');
-  }
-  return await response.json();
+  return response.json();
 }
 
 function deleteUser(userId) {
   const users = getFromStorage(USERS_STORAGE_KEY) || [];
-  const updatedUsers = users.filter(user => user.id !== userId);
-
-  if (updatedUsers.length > 0) {
-    saveToStorage(USERS_STORAGE_KEY, updatedUsers);
-  } else {
-    localStorage.removeItem(USERS_STORAGE_KEY);
-  }
+  saveToStorage(USERS_STORAGE_KEY, users.filter(user => user.id !== userId));
 }
 
 deleteBtnAllCards.addEventListener('click', () => {
   localStorage.removeItem(USERS_STORAGE_KEY);
   usersList.innerHTML = '';
-  dataLoading.classList.add('hidden');
-  loadingError.classList.add('hidden');
+  toggle(dataLoading, false);
+  toggle(loadingError, false);
 });
 
 getBtnAllCards.addEventListener('click', async () => {
-  const userFromStorage = getFromStorage(USERS_STORAGE_KEY);
+  const cached = getFromStorage(USERS_STORAGE_KEY);
 
-  if (userFromStorage && userFromStorage.length > 0) {
-    renderContainerUser(userFromStorage);
-    dataLoading.classList.remove('hidden');
+  if (cached?.length) {
+    renderContainerUser(cached);
+    toggle(dataLoading, true);
     return;
   }
 
-  loader.classList.remove('hidden');
-  loadingError.classList.add('hidden');
-  dataLoading.classList.add('hidden');
+  toggle(loader, true);
+  toggle(loadingError, false);
+  toggle(dataLoading, false);
   try {
     const users = await fetchUsers();
     saveToStorage(USERS_STORAGE_KEY, users);
     renderContainerUser(users);
-    dataLoading.classList.remove('hidden');
-  } catch (error) {
-    loadingError.classList.remove('hidden');
+    toggle(dataLoading, true);
+  } catch {
+    toggle(loadingError, true);
   } finally {
-    loader.classList.add('hidden');
+    toggle(loader, false);
   }
 });
 
 function renderContainerUser(users) {
   usersList.innerHTML = '';
   users.forEach(user => {
-    const template = document.querySelector('#user-card-template').content.cloneNode(true);
+    const template = cardTemplate.content.cloneNode(true);
 
     const card = template.querySelector('.user-container');
     card.dataset.id = user.id;
@@ -92,11 +84,10 @@ function renderContainerUser(users) {
     template.querySelector('.user-surname').textContent = user.surname;
     template.querySelector('.user-email').textContent = user.email;
     template.querySelector('.user-age').textContent = `Возраст: ${user.age}`;
-    const btnSpec = template.querySelector('.Btn-Specific');
-    btnSpec.addEventListener('click', () => {
+    template.querySelector('.btn-specific').addEventListener('click', () => {
       deleteUser(user.id);
       card.remove();
-      dataLoading.classList.add('hidden');
+      toggle(dataLoading, false);
     });
     usersList.append(template);
   })
