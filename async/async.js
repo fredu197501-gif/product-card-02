@@ -11,7 +11,6 @@ const toggle = (el, show) => el.classList.toggle('hidden', !show);
 
 const getFromStorage = key => {
   try {
-    ;
     return JSON.parse(localStorage.getItem(key));
   } catch {
     localStorage.removeItem(key);
